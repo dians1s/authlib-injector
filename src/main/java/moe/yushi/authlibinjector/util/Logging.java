@@ -76,7 +76,7 @@ public final class Logging {
 		if (level == Level.DEBUG && !Config.verboseLogging) {
 			return;
 		}
-		String log = "[authlib-injector] [" + level + "] " + message;
+		String log = "[authlib-injector] [beastmine-patch] [" + level + "] " + message;
 		if (e != null) {
 			StringWriter sw = new StringWriter();
 			PrintWriter pw = new PrintWriter(sw);
@@ -93,7 +93,7 @@ public final class Logging {
 			try {
 				logfile.write(Charset.defaultCharset().encode(log + System.lineSeparator()));
 			} catch (IOException ex) {
-				out.println("[authlib-injector] [ERROR] Error writing to log file: " + ex);
+				out.println("[authlib-injector] [beastmine-patch] [ERROR] Error writing to log file: " + ex);
 			}
 		}
 	}

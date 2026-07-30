@@ -28,6 +28,7 @@ public final class Premain {
 	public static void premain(String arg, Instrumentation instrumentation) {
 		try {
 			initInjector(arg, instrumentation, false);
+			ParentProcessWatcher.start();
 		} catch (InitializationException e) {
 			log(DEBUG, "A known exception has occurred", e);
 			System.exit(1);
